@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Maths">
+      <UniqueIdentifier>{76e5bab3-6dd3-45d6-acd0-5e8967f9c2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{1f4627b1-1e8e-4ad6-b76d-c21a55fcfc86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cube">
+      <UniqueIdentifier>{b0bfbe9a-e2d3-4f43-abbb-fb96238056c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input">
+      <UniqueIdentifier>{d2110943-9bd3-4626-95dc-637d1088ff8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Maths">
+      <UniqueIdentifier>{d6ccd3b0-3bc1-41a2-a00d-40821a7b3056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input">
+      <UniqueIdentifier>{b2f8d808-903e-4161-8bda-8d7263158af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cube">
+      <UniqueIdentifier>{c7c4ae41-f0c7-42d7-977b-593ebdb705bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{8982a77f-4126-4c3a-9a95-79b7055141ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Cube\SolveStates">
+      <UniqueIdentifier>{4f194ac0-da5d-4aa3-86ab-f3f410346751}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Cube\SolveState">
+      <UniqueIdentifier>{cc47f932-8aee-4c69-9b3f-626315a30342}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Centres.cpp">
+      <Filter>Source Files\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="Corner.cpp">
+      <Filter>Source Files\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="Cube.cpp">
+      <Filter>Source Files\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="Edge.cpp">
+      <Filter>Source Files\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="Input.cpp">
+      <Filter>Source Files\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="Mesh.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Piece.cpp">
+      <Filter>Source Files\Cube</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene3D.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Shape.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="timerclass.cpp">
+      <Filter>Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="TokenStream.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Vec3.cpp">
+      <Filter>Source Files\Maths</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Solver.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="UserInput.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Turn.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TurnType.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Algorithm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CornerState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="CrossState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="FinalState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="SecondLayerState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="SolveState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="SwapCornerState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="TopLayerState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="TopEdgeState.cpp">
+      <Filter>Source Files\Cube\SolveState</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Vec3.h">
+      <Filter>Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="TokenStream.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="timerclass.h">
+      <Filter>Header Files\Maths</Filter>
+    </ClInclude>
+    <ClInclude Include="Shape.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene3D.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Piece.h">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Mesh.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Input.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Edge.h">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="Cube.h">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="Corner.h">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="Centres.h">
+      <Filter>Header Files\Cube</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Header Files\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="UserInput.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Turn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TurnType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Algorithm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CornerState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="CrossState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SolveState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SwapCornerState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="FinalState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="TopEdgeState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="TopLayerState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="SecondLayerState.h">
+      <Filter>Header Files\Cube\SolveStates</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

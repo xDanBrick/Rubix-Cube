@@ -1,0 +1,39 @@
+﻿Build started 18/04/2015 18:56:02.
+     1>Project "C:\Users\Daniel\Desktop\Unistuff\2nd year\Graphics\coursework\Lab6 3D\Lab3e\Lab3e.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /Oy- /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Release\\" /Fd"Release\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Camera.cpp Main.cpp Model.cpp Scene3D.cpp Shape.cpp
+         Camera.cpp
+     1>Camera.cpp(23): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Camera.cpp(24): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Camera.cpp(25): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Camera.cpp(27): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Camera.cpp(28): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>Camera.cpp(29): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+         Main.cpp
+     1>c:\users\daniel\desktop\unistuff\2nd year\graphics\coursework\lab6 3d\lab3e\Scene3D.h(11): fatal error C1083: Cannot open include file: 'SOIL.h': No such file or directory
+         Model.cpp
+     1>c:\users\daniel\desktop\unistuff\2nd year\graphics\coursework\lab6 3d\lab3e\model.h(14): fatal error C1083: Cannot open include file: 'SOIL.h': No such file or directory
+         Scene3D.cpp
+     1>c:\users\daniel\desktop\unistuff\2nd year\graphics\coursework\lab6 3d\lab3e\Scene3D.h(11): fatal error C1083: Cannot open include file: 'SOIL.h': No such file or directory
+         Shape.cpp
+     1>Shape.cpp(94): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(95): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(99): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(100): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(104): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(105): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(109): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(110): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(130): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(131): warning C4244: 'initializing' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(135): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(136): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(140): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(141): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(145): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Shape.cpp(146): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>Done Building Project "C:\Users\Daniel\Desktop\Unistuff\2nd year\Graphics\coursework\Lab6 3D\Lab3e\Lab3e.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:09.06

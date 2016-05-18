@@ -1,0 +1,42 @@
+﻿Build started 22-Sep-15 5:03:38 PM.
+     1>Project "C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Lab3e\Lab3e.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Lab3e\\include" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Piece.cpp
+         Piece.cpp
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Debug\Lab3e.exe" /INCREMENTAL /NOLOGO /LIBPATH:"C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Lab3e\\lib" winmm.lib Msimg32.lib opengl32.lib glu32.lib SOIL.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Debug\Lab3e.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Debug\Lab3e.lib" /MACHINE:X86 Debug\Algorithm.obj
+         Debug\Camera.obj
+         Debug\Centres.obj
+         Debug\Corner.obj
+         Debug\CornerState.obj
+         Debug\CrossState.obj
+         Debug\Cube.obj
+         Debug\CubeInput.obj
+         Debug\Edge.obj
+         Debug\FinalState.obj
+         Debug\Mesh.obj
+         Debug\Model.obj
+         Debug\Piece.obj
+         Debug\Scene3D.obj
+         Debug\Input.obj
+         Debug\Main.obj
+         Debug\SecondLayerState.obj
+         Debug\Server.obj
+         Debug\Shape.obj
+         Debug\Solver.obj
+         Debug\SolveState.obj
+         Debug\SwapCornerState.obj
+         Debug\timerclass.obj
+         Debug\TokenStream.obj
+         Debug\TopEdgeState.obj
+         Debug\TopLayerState.obj
+         Debug\Turn.obj
+         Debug\TurnType.obj
+         Debug\UserInput.obj
+         Debug\Vec3.obj
+         Lab3e.vcxproj -> C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Debug\Lab3e.exe
+     1>Done Building Project "C:\Users\Daniel\Desktop\Unistuff\2nd Year\Graphics\ran\Source\Lab6 3D\Lab3e\Lab3e.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.90
