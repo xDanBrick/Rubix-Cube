@@ -69,9 +69,6 @@
     <ClCompile Include="Mesh.cpp">
       <Filter>Source Files\Rendering</Filter>
     </ClCompile>
-    <ClCompile Include="Model.cpp">
-      <Filter>Source Files\Rendering</Filter>
-    </ClCompile>
     <ClCompile Include="Piece.cpp">
       <Filter>Source Files\Cube</Filter>
     </ClCompile>
@@ -83,9 +80,6 @@
     </ClCompile>
     <ClCompile Include="timerclass.cpp">
       <Filter>Source Files\Maths</Filter>
-    </ClCompile>
-    <ClCompile Include="TokenStream.cpp">
-      <Filter>Source Files\Rendering</Filter>
     </ClCompile>
     <ClCompile Include="Vec3.cpp">
       <Filter>Source Files\Maths</Filter>
@@ -131,9 +125,6 @@
     </ClCompile>
     <ClCompile Include="TopEdgeState.cpp">
       <Filter>Source Files\Cube\SolveState</Filter>
-    </ClCompile>
-    <ClCompile Include="Server.cpp">
-      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

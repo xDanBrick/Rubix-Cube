@@ -95,28 +95,9 @@ void Scene3D::Init(HWND* wnd, Input* in, Camera* cam)
 	GetClientRect(*hwnd, &screenRect);	//get rect into our handy global rect
 	InitializeOpenGL(screenRect.right, screenRect.bottom); // initialise openGL
 	cube.Init(in);
-	//skyTexture = SetTexture("Images/skybox.png");
-	
-	//Warehouse and skybox
-	shape.RenderSkyBox(skyTexture, currentCamera);
 }
 
-GLuint Scene3D::SetTexture(const char *texture)
-{
-	GLuint Texture = SOIL_load_OGL_texture
-		(
-		texture,
-		SOIL_LOAD_AUTO,
-		SOIL_CREATE_NEW_ID,
-		SOIL_FLAG_MIPMAPS | SOIL_FLAG_NTSC_SAFE_RGB | SOIL_FLAG_COMPRESS_TO_DXT
-		);
-	if (0 == Texture)
-	{
-		printf("SOIL loading error: '%s'\n", SOIL_last_result());
-	}
 
-	return Texture;
-}
 
 void Scene3D::DrawScene(float dt) 
 {

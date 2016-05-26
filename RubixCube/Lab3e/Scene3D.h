@@ -11,7 +11,6 @@
 #include "SOIL.h"
 #include "Shape.h"
 #include "Camera.h"
-#include "Model.h"
 #include "Mesh.h"
 #include "Cube.h"
 
@@ -41,10 +40,6 @@ protected:
 	RECT screenRect;
 	HDC	hdc;
 	HGLRC hrc;			//hardware RENDERING CONTEXT
-	Shape shape;
-	Mesh mesh;
-	GLuint skyTexture;
-	GLuint SetTexture(const char *texture);
 	Cube cube;
 	float speed, sensitivity;
 };
