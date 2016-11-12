@@ -5,7 +5,7 @@
 class CornerState : public SolveState
 {
 	public:
-		CornerState(vector<Piece* >* cube);
+		CornerState(Cube* cube);
 		~CornerState();
 
 		int GetNextTurn();

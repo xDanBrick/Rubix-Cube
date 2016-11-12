@@ -10,7 +10,7 @@ Piece::Piece()
 	startAngleY_ = 0.0f;
 	startAngleZ_ = 0.0f;
 	turnCounter_ = 0;
-	speed_ = 0.0f;
+	speed_ = 0.5f;
 	solved_ = false;
 	flipped_ = false;
 	beingSolved = false;	

@@ -5,7 +5,7 @@
 class CrossState : public SolveState
 {
 	public:
-		CrossState(vector<Piece* >* cube);
+		CrossState(Cube* cube);
 		~CrossState();
 		int GetNextTurn();
 		int Centres();

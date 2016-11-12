@@ -4,7 +4,7 @@
 class SwapCornerState : public SolveState
 {
 	public:
-		SwapCornerState(vector<Piece* >* cube);
+		SwapCornerState(Cube* cube);
 		~SwapCornerState();
 		vector<int > flipEdge_;
 

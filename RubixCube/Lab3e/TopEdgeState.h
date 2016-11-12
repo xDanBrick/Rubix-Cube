@@ -5,7 +5,7 @@
 class TopEdgeState : public SolveState
 {
 	public:
-		TopEdgeState(vector<Piece* >* cube);
+		TopEdgeState(Cube* cube);
 		~TopEdgeState();
 
 		vector<int > flipEdge_;

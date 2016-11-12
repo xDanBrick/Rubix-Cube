@@ -1,8 +1,7 @@
 #include "TopLayerState.h"
 
-TopLayerState::TopLayerState(vector<Piece* >* cube)
+TopLayerState::TopLayerState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
 	GetTargetPieces(FU, BU, LU, RU);
 	state_ = CheckCross();
 }
@@ -27,7 +26,7 @@ int TopLayerState::GetNextTurn()
 	{
 		return DoAlgorithm(algorithm_->cross_, LU);
 	}
-	return up;
+	return 0;
 }
 int TopLayerState::SolveTopCross()
 {

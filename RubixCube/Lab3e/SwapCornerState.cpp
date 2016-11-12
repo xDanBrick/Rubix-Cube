@@ -1,8 +1,7 @@
 #include "SwapCornerState.h"
 
-SwapCornerState::SwapCornerState(vector<Piece* >* cube)
+SwapCornerState::SwapCornerState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
 	target_[0] = FUR;
 	target_[1] = BUR;
 	target_[2] = BUL;

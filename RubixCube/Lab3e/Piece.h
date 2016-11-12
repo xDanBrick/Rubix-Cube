@@ -38,7 +38,6 @@ class Piece
 		inline bool IsFlipped(){ if (position_ == startPosition_ && color1_ != startColor1_){ return true; } return false; };
 		int topColor_;
 		bool facing_;
-		int Facing(int dir);
 		void FlipPosition();
 
 	protected:

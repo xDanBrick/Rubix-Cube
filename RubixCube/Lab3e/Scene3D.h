@@ -9,10 +9,9 @@
 #include <gl/glu.h>
 #include "Input.h"
 #include "SOIL.h"
-#include "Shape.h"
 #include "Camera.h"
 #include "Mesh.h"
-#include "Cube.h"
+#include "Application.h"
 
 #define COLOUR_DEPTH 16	//Colour depth
 
@@ -28,19 +27,15 @@ protected:
 	void ResizeGLWindow(int, int);	//width and height
 	void InitializeOpenGL(int, int); // width and height
 	void HandleInput(float dt);
-	void RenderModels();
 
 	//vars
 	HWND* hwnd;
 	Input* input;
-	Camera* currentCamera;
 	Camera* camera;
-	Camera* securityCam1;
-	Camera* securityCam2;
 	RECT screenRect;
 	HDC	hdc;
 	HGLRC hrc;			//hardware RENDERING CONTEXT
-	Cube cube;
+	Application* application_;
 	float speed, sensitivity;
 };
 

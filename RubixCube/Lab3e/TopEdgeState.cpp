@@ -1,8 +1,8 @@
 #include "TopEdgeState.h"
 
-TopEdgeState::TopEdgeState(vector<Piece* >* cube)
+
+TopEdgeState::TopEdgeState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
 	target_[0] = FU;
 	target_[1] = BU;
 	target_[2] = FL;

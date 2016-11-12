@@ -4,7 +4,7 @@
 class FinalState : public SolveState
 {
 	public:
-		FinalState(vector<Piece* >* cube);
+		FinalState(Cube* cube);
 		~FinalState();
 
 		vector<int > flipEdge_;

@@ -1,9 +1,9 @@
 #include "FinalState.h"
 
 
-FinalState::FinalState(vector<Piece* >* cube)
+FinalState::FinalState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
+	
 	target_[0] = BUR;
 	target_[1] = BUL;
 	target_[2] = FUL;

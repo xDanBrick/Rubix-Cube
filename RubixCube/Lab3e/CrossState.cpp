@@ -1,9 +1,8 @@
 #include "CrossState.h"
 
-CrossState::CrossState(vector<Piece* >* cube)
+CrossState::CrossState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
-	turnType_ = algorithm_->turnType_;
+	//turnType_ = cube->;
 	beingSolved_ = 0;
 	GetTargetPieces(RD, LD, FD, BD);
 	target_[0] = RD;

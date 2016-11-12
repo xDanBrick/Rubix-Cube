@@ -1,8 +1,8 @@
 #include "SecondLayerState.h"
 
-SecondLayerState::SecondLayerState(vector<Piece* >* cube)
+SecondLayerState::SecondLayerState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
+
 	GetTargetPieces(FR, FL, BL, BR);
 }
 

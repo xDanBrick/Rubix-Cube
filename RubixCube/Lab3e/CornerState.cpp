@@ -5,9 +5,8 @@
 //If flipped get to next target
 //Insert targetPieces_.front()
 
-CornerState::CornerState(vector<Piece* >* cube)
+CornerState::CornerState(Cube* cube) : SolveState(cube)
 {
-	cube_ = cube;
 	nextTurn_ = 0;
 	step_ = 0;
 	beingSolved_ = 0;

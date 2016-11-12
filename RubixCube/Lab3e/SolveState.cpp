@@ -1,6 +1,6 @@
 #include "SolveState.h"
 
-SolveState::SolveState()
+SolveState::SolveState(Cube* cube) : SolveState(cube)
 {
 	currentMove_ = -1;
 	step_ = 0;
@@ -15,11 +15,11 @@ SolveState::~SolveState()
 
 Piece* SolveState::LookFor(int position)
 {
-	for (int i = 0; i < cube_->size(); i++)
+	for (int i = 0; i < cube_->cube_.size(); i++)
 	{
-		if (cube_->at(i)->GetStartPosition() == position)
+		if (cube_->cube_.at(i)->GetStartPosition() == position)
 		{
-			return cube_->at(i);
+			return cube_->cube_.at(i);
 		}
 	}
 	return NULL;

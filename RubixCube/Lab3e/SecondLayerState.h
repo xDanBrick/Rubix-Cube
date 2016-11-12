@@ -5,7 +5,7 @@
 class SecondLayerState : public SolveState
 {
 	public:
-		SecondLayerState(vector<Piece* >* cube);
+		SecondLayerState(Cube* cube);
 		~SecondLayerState();
 		int GetNextTurn();
 		SolveState* GetNewState();

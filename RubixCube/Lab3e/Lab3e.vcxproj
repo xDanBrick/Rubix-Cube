@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,14 +19,14 @@
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -47,7 +47,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;Msimg32.lib;opengl32.lib;glu32.lib;SOIL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;Msimg32.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>NotSet</SubSystem>
       <AdditionalLibraryDirectories>$(ProjectDir)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
@@ -67,13 +67,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Algorithm.cpp" />
+    <ClCompile Include="Application.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Centres.cpp" />
     <ClCompile Include="Corner.cpp" />
     <ClCompile Include="CornerState.cpp" />
     <ClCompile Include="CrossState.cpp" />
     <ClCompile Include="Cube.cpp" />
-    <ClCompile Include="CubeInput.cpp" />
+    <ClCompile Include="Controller.cpp" />
     <ClCompile Include="Edge.cpp" />
     <ClCompile Include="FinalState.cpp" />
     <ClCompile Include="Mesh.cpp" />
@@ -82,27 +83,26 @@
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SecondLayerState.cpp" />
-    <ClCompile Include="Shape.cpp" />
-    <ClCompile Include="Solver.cpp" />
+    <ClCompile Include="AIController.cpp" />
     <ClCompile Include="SolveState.cpp" />
     <ClCompile Include="SwapCornerState.cpp" />
     <ClCompile Include="timerclass.cpp" />
     <ClCompile Include="TopEdgeState.cpp" />
     <ClCompile Include="TopLayerState.cpp" />
     <ClCompile Include="Turn.cpp" />
-    <ClCompile Include="TurnType.cpp" />
-    <ClCompile Include="UserInput.cpp" />
+    <ClCompile Include="UserController.cpp" />
     <ClCompile Include="Vec3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Algorithm.h" />
+    <ClInclude Include="Application.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Centres.h" />
     <ClInclude Include="Corner.h" />
     <ClInclude Include="CornerState.h" />
     <ClInclude Include="CrossState.h" />
     <ClInclude Include="Cube.h" />
-    <ClInclude Include="CubeInput.h" />
+    <ClInclude Include="Controller.h" />
     <ClInclude Include="Edge.h" />
     <ClInclude Include="FinalState.h" />
     <ClInclude Include="Mesh.h" />
@@ -111,9 +111,7 @@
     <ClInclude Include="Scene3D.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="SecondLayerState.h" />
-    <ClInclude Include="Server.h" />
-    <ClInclude Include="Shape.h" />
-    <ClInclude Include="Solver.h" />
+    <ClInclude Include="AIController.h" />
     <ClInclude Include="SolveState.h" />
     <ClInclude Include="SwapCornerState.h" />
     <ClInclude Include="timerclass.h" />
@@ -121,8 +119,7 @@
     <ClInclude Include="TopEdgeState.h" />
     <ClInclude Include="TopLayerState.h" />
     <ClInclude Include="Turn.h" />
-    <ClInclude Include="TurnType.h" />
-    <ClInclude Include="UserInput.h" />
+    <ClInclude Include="UserController.h" />
     <ClInclude Include="Vec3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

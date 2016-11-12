@@ -6,8 +6,17 @@
 #include "Centres.h"
 #include <vector>
 #include "Piece.h"
-#include "UserInput.h"
-#include "Solver.h"
+#include "Turn.h"
+#include "Algorithm.h"
+
+enum TURN {
+	right = 0, rightIn, mid, midIn, left, leftIn,
+	up, upIn, midU, midUIn, down, downIn,
+	front, frontIn, midF, midFIn, back, backIn, none
+};
+
+
+enum DIRECTION { X, Y, Z };
 
 using std::vector;
 
@@ -16,17 +25,31 @@ class Cube
 	public:
 		Cube();
 		~Cube();
+		vector<Turn* > moves_;
+		inline void MixCube() { state_ = MIX; };
+		inline void SelectPiece(Piece* piece) { piece->SelectPiece(); selected_.push_back(piece); };
 		void Render();
-		void Init(Input* in);
 		Mesh mesh;
-		Input* in_;
-		vector<Piece*> cube;
-		CubeInput* input_;
-		void UpdateInput();
+		vector<Piece*> cube_;
+		void Reset();
+		void Update();
+		void DoAlgorithm();
+		bool IsMoving();
+		vector<Piece*> selected_;
+		void SelectSide(int side[9], int type);
+		int type_;
+		bool isMoving_;
+		void RotateSelected(float angle);
+		void MakeTurn(Turn* turn);
+		Algorithm currentAlgorithm_;
+		bool doingAlgorithm_;
+	private:
 		void Mix();
-		void Solve();
-		void Manual();
-		Solver* solver_;;
-		UserInput* userInput_;
+		enum STATE{MIX, WAIT, TURN};
+		STATE state_;
+		int mixerTurn_;
+		void AddToSelected(int turn[9]);
+		int currentTurn_;
+		bool mixing_;
 };
 

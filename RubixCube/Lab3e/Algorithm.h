@@ -1,16 +1,15 @@
 #pragma once
-#include "TurnType.h"
 #include <vector>
 
 using std::vector;
+
 
 class Algorithm
 {
 	public:
 		Algorithm();
 		~Algorithm();
-		TurnType* turnType_;
-		vector<int >  CreateAlgorithm(int turn[12], int size);
+		vector<int > CreateAlgorithm(int turn[12], int size);
 		vector<int > sexyMove_;
 		vector<int > cross_;
 		vector<int > rotateTopEdges_;
@@ -25,5 +24,7 @@ class Algorithm
 		vector<int > SwapCorners(int edge, int edge2);
 		vector<int > TakeOutEdge(int edge);
 		inline int CheckInverted(int edge){ if (edge % 2 == 0){ return 1; } return -1; };
+
+		int currentMove_;
 };
 

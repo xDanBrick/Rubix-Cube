@@ -1,9 +1,5 @@
 #include "Scene3D.h"
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// BUTTONS: 1 - main camera  2 - security cam1  3 - security cam2  5 - Open/Close door  ENTER - Wireframe Mode //
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 bool Scene3D::CreatePixelFormat(HDC hdc) 
 { 
     PIXELFORMATDESCRIPTOR pfd = {0}; 
@@ -73,12 +69,7 @@ void Scene3D::Init(HWND* wnd, Input* in, Camera* cam)
 	input = in;
 	//Camera
 	camera = cam;
-	currentCamera = camera;
-	securityCam1 = new Camera;
-	securityCam2 = new Camera;
-	currentCamera->Init(0.0f, 4.0f, 7.0f, 0.0f, 0.0f, 0.0f);
-	securityCam1->Init(4.5f, 4.8f, 0.0f, -30.0f, 270.0f, 0.0f);
-	securityCam2->Init(4.5f, 5.0f, 10.5f, -30.0f, 270.0f, 0.0f);
+	camera->Init(0.0f, 4.0f, 7.0f, 0.0f, 0.0f, 0.0f);
 	//OpenGL settings
 	glShadeModel(GL_SMOOTH);							// Enable Smooth Shading
 	glClearColor(0.0f, 0.0f, 0.0f, 0.5f);				// Black Background
@@ -94,7 +85,7 @@ void Scene3D::Init(HWND* wnd, Input* in, Camera* cam)
 	sensitivity = 10.0f;
 	GetClientRect(*hwnd, &screenRect);	//get rect into our handy global rect
 	InitializeOpenGL(screenRect.right, screenRect.bottom); // initialise openGL
-	cube.Init(in);
+	application_ = new Application(in);
 }
 
 
@@ -109,10 +100,11 @@ void Scene3D::DrawScene(float dt)
 	glLoadIdentity();// load Identity Matrix
 
 	//Sets the camera to look at the current camera
-	gluLookAt(currentCamera->GetCameraX(), currentCamera->GetCameraY(), currentCamera->GetCameraZ(),
-		currentCamera->GetLookAtX(), currentCamera->GetLookAtY(), currentCamera->GetLookAtZ(),
-		currentCamera->GetUpPointX(), currentCamera->GetUpPointY(), currentCamera->GetUpPointZ());
-	cube.Render();
+	gluLookAt(camera->GetCameraX(), camera->GetCameraY(), camera->GetCameraZ(),
+		camera->GetLookAtX(), camera->GetLookAtY(), camera->GetLookAtZ(),
+		camera->GetUpPointX(), camera->GetUpPointY(), camera->GetUpPointZ());
+	application_->Update();
+	application_->Render();
 	SwapBuffers(hdc);// Swap the frame buffers.
 }		
 
@@ -130,66 +122,51 @@ void Scene3D::Resize()
 void Scene3D::HandleInput(float dt)
 {
 	//For the main camera
-	if (currentCamera == camera)
+	// Moving the camera up and down.
+	if (input->isKeyDown(VK_UP))
 	{
-		// Moving the camera up and down.
-		if (input->isKeyDown(VK_UP))
-		{
-			currentCamera->MoveCameraY(dt * speed);
-		}
-		if (input->isKeyDown(VK_DOWN))
-		{
-			currentCamera->MoveCameraY(dt * -speed);
-		}
-		// Moving the camera forwards and backwards.
-		if (input->isKeyDown('W'))
-		{
-			currentCamera->MoveCameraZ(dt * speed);
-		}
-		if (input->isKeyDown('S'))
-		{
-			currentCamera->MoveCameraZ(dt * -speed);
-		}
-		//Moving the camera left and right
-		if (input->isKeyDown('A'))
-		{
-			currentCamera->MoveCameraX(dt * -speed);
-		}
-		if (input->isKeyDown('D'))
-		{
-			currentCamera->MoveCameraX(dt * speed);
-		}
-		int xDis, yDis;
-		POINT windowCentre;
-		windowCentre.x = screenRect.right * 0.5;
-		windowCentre.y = screenRect.bottom * 0.5;
-		//Distance the mouse has moved in the x-axis
-		if (input->getMouseX() != windowCentre.x)
-		{
-			xDis = (input->getMouseX() - windowCentre.x);
-			currentCamera->MoveCameraYaw(dt * (sensitivity * xDis));
-		}
-		//Distance the mouse has moved in the y-axis
-		if (input->getPreviousMouseY() != windowCentre.y)
-		{
-			yDis = (windowCentre.y - input->getMouseY());
-			currentCamera->MoveCameraPitch(dt * (sensitivity * yDis));
-		}
-		ClientToScreen(*hwnd, &windowCentre);
-		//Resets the mouse to the centre
-		SetCursorPos(windowCentre.x, windowCentre.y);
+		camera->MoveCameraY(dt * speed);
 	}
-	//If a security camera is selected
-	else if (currentCamera == securityCam1 || currentCamera == securityCam2)
+	if (input->isKeyDown(VK_DOWN))
 	{
-		if (input->isKeyDown(VK_LEFT))
-		{
-			currentCamera->MoveCameraYaw(dt * -sensitivity);
-		}
-		else if (input->isKeyDown(VK_RIGHT))
-		{
-			currentCamera->MoveCameraYaw(dt * sensitivity);
-		}
-	}	
-	currentCamera->Update();
+		camera->MoveCameraY(dt * -speed);
+	}
+	// Moving the camera forwards and backwards.
+	if (input->isKeyDown('W'))
+	{
+		camera->MoveCameraZ(dt * speed);
+	}
+	if (input->isKeyDown('S'))
+	{
+		camera->MoveCameraZ(dt * -speed);
+	}
+	//Moving the camera left and right
+	if (input->isKeyDown('A'))
+	{
+		camera->MoveCameraX(dt * -speed);
+	}
+	if (input->isKeyDown('D'))
+	{
+		camera->MoveCameraX(dt * speed);
+	}
+	int xDis, yDis;
+	POINT windowCentre;
+	windowCentre.x = screenRect.right * 0.5;
+	windowCentre.y = screenRect.bottom * 0.5;
+	//Distance the mouse has moved in the x-axis
+	if (input->getMouseX() != windowCentre.x)
+	{
+		xDis = (input->getMouseX() - windowCentre.x);
+		camera->MoveCameraYaw(dt * (sensitivity * xDis));
+	}
+	//Distance the mouse has moved in the y-axis
+	if (input->getPreviousMouseY() != windowCentre.y)
+	{
+		yDis = (windowCentre.y - input->getMouseY());
+		camera->MoveCameraPitch(dt * (sensitivity * yDis));
+	}
+	ClientToScreen(*hwnd, &windowCentre);
+	//Resets the mouse to the centre
+	SetCursorPos(windowCentre.x, windowCentre.y);
+	camera->Update();
 }
